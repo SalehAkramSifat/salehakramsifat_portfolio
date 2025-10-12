@@ -75,6 +75,7 @@ export function Hero() {
             <Button size="lg" variant="outline" className="text-lg px-8 py-3">
               Download Resume
             </Button>
+
           </motion.div>
 
           {/* Social Links */}

@@ -141,10 +141,17 @@ export function About() {
               </div>
 
               {/* Download Resume Button */}
-              <Button className="w-full sm:w-auto" size="lg">
-                <Download size={18} className="mr-2" />
-                Download Full Resume
+              <Button
+                asChild
+                className="w-full sm:w-auto"
+                size="lg"
+              >
+                <a href="/resume.pdf" download="Saleh_Akram_Sifat_Resume.pdf">
+                  <Download size={18} className="mr-2" />
+                  Download Full Resume
+                </a>
               </Button>
+
             </div>
           </motion.div>
 

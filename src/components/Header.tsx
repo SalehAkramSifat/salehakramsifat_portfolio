@@ -36,11 +36,10 @@ export function Header() {
 
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-sm' 
-          : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-sm'
+        : 'bg-transparent'
+        }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -54,8 +53,8 @@ export function Header() {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-  <span className="text-primary-foreground font-bold text-lg">S A</span>
-</div>
+              <span className="text-primary-foreground font-bold text-lg">S A</span>
+            </div>
 
             <span className="text-xl font-semibold text-foreground">Sifat</span>
           </motion.div>
@@ -79,13 +78,17 @@ export function Header() {
           <div className="flex items-center space-x-4">
             {/* Resume Download Button */}
             <Button
+              asChild
               variant="outline"
               size="sm"
               className="hidden sm:flex items-center space-x-2"
             >
-              <Download size={16} />
-              <span>Resume</span>
+              <a href="/resume.pdf" download="Saleh_Akram_Sifat_Resume.pdf">
+                <Download size={16} />
+                <span>Resume</span>
+              </a>
             </Button>
+
 
             {/* Dark Mode Toggle */}
             <Button
@@ -113,9 +116,9 @@ export function Header() {
         <motion.div
           className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}
           initial={{ opacity: 0, height: 0 }}
-          animate={{ 
-            opacity: isMenuOpen ? 1 : 0, 
-            height: isMenuOpen ? 'auto' : 0 
+          animate={{
+            opacity: isMenuOpen ? 1 : 0,
+            height: isMenuOpen ? 'auto' : 0
           }}
           transition={{ duration: 0.3 }}
         >
@@ -131,10 +134,17 @@ export function Header() {
               </a>
             ))}
             <div className="px-4 pt-2">
-              <Button className="w-full" size="sm">
-                <Download size={16} className="mr-2" />
-                Download Resume
-              </Button>
+              <a href="/resume.pdf" download>
+                <Button asChild className="w-full" size="sm">
+                  <a href="/resume.pdf" download>
+                    <Download size={16} className="mr-2" />
+                    Download Resume
+                  </a>
+                </Button>
+
+              </a>
+
+
             </div>
           </div>
         </motion.div>
