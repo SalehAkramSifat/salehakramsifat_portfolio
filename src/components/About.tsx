@@ -1,4 +1,4 @@
-import { motion } from 'motion/react'
+import { motion } from 'framer-motion'
 import { Download, MapPin, Calendar, Briefcase } from 'lucide-react'
 import { Button } from './ui/button'
 import { Card, CardContent } from './ui/card'

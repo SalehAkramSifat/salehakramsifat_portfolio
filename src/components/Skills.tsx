@@ -1,4 +1,4 @@
-import { motion } from 'motion/react'
+import { motion } from 'framer-motion'
 import { Code, Database, Smartphone, Palette, GitBranch, Cloud } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 import { Progress } from './ui/progress'

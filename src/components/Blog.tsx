@@ -1,4 +1,4 @@
-import { motion } from 'motion/react'
+import { motion } from 'framer-motion'
 import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react'
 import { Card, CardContent, CardHeader } from './ui/card'
 import { Button } from './ui/button'
@@ -41,10 +41,10 @@ export function Blog() {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'short', 
-      day: 'numeric' 
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
     })
   }
 
@@ -63,7 +63,7 @@ export function Blog() {
             Latest Blog Posts
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Insights, tutorials, and thoughts on Flutter development, mobile app architecture, 
+            Insights, tutorials, and thoughts on Flutter development, mobile app architecture,
             and the latest trends in cross-platform development.
           </p>
         </motion.div>
@@ -87,7 +87,7 @@ export function Blog() {
                     alt={post.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  
+
                   {/* Category Badge */}
                   <div className="absolute top-4 left-4">
                     <Badge className="bg-primary text-primary-foreground">
@@ -111,7 +111,7 @@ export function Blog() {
                       <span>{post.readTime}</span>
                     </div>
                   </div>
-                  
+
                   <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300 line-clamp-2">
                     {post.title}
                   </h3>
@@ -133,8 +133,8 @@ export function Blog() {
                   </div>
 
                   {/* Read More Button */}
-                  <Button 
-                    variant="ghost" 
+                  <Button
+                    variant="ghost"
                     className="w-full justify-between p-0 h-auto text-primary hover:text-primary/80 group/btn"
                   >
                     <span>Read More</span>
@@ -178,10 +178,10 @@ export function Blog() {
                 Stay Updated
               </h3>
               <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-                Subscribe to my newsletter to get the latest posts about Flutter development, 
+                Subscribe to my newsletter to get the latest posts about Flutter development,
                 tips, and industry insights delivered to your inbox.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
                 <input
                   type="email"

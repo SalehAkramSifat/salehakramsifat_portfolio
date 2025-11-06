@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'motion/react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { ExternalLink, Github, Filter } from 'lucide-react'
 import { Card, CardContent, CardHeader } from './ui/card'
 import { Button } from './ui/button'
@@ -80,8 +80,8 @@ export function Projects() {
     }
   ]
 
-  const filteredProjects = activeFilter === 'All' 
-    ? projects 
+  const filteredProjects = activeFilter === 'All'
+    ? projects
     : projects.filter(project => project.category === activeFilter)
 
   return (
@@ -99,7 +99,7 @@ export function Projects() {
             Featured Projects
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            A showcase of my recent work and projects that demonstrate my skills 
+            A showcase of my recent work and projects that demonstrate my skills
             in Flutter development and cross-platform solutions.
           </p>
 
@@ -130,11 +130,11 @@ export function Projects() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ 
-                  duration: 0.5, 
+                transition={{
+                  duration: 0.5,
                   delay: index * 0.1,
                   type: "spring",
-                  stiffness: 300 
+                  stiffness: 300
                 }}
                 className={`${project.featured ? 'md:col-span-2 lg:col-span-1' : ''}`}
               >
@@ -146,7 +146,7 @@ export function Projects() {
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-                    
+
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">

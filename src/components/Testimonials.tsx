@@ -1,4 +1,4 @@
-import { motion } from 'motion/react'
+import { motion } from 'framer-motion'
 import { Star, Quote } from 'lucide-react'
 import { Card, CardContent } from './ui/card'
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
@@ -8,64 +8,64 @@ export function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      name: 'Arif Hossain',
-      position: 'Product Manager',
-      company: 'TechStart Solutions',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMG1hbnxlbnwxfHx8fDE3NTc5MjY0MTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      content: 'Saleh delivered our app ahead of time with a flawless user experience. His attention to detail and technical expertise made our project a huge success.',
+      name: 'Client from Fiverr',
+      position: '',
+      company: 'Fiverr',
+      avatar: 'https://cdn-icons-png.flaticon.com/512/5968/5968849.png',
+      content: 'Saleh and the team delivered exactly what I needed for the mobile app side of my project. Everything was clean, responsive, and functional from user deal submissions to location based browsing. They handled every tweak I threw at them, communicated well, and followed through without dropping the ball. Would definitely recommend for serious app work. Thanks guys',
       rating: 5,
       featured: true
     },
-    {
-      id: 2,
-      name: 'Amina Sultana',
-      position: 'CEO',
-      company: 'Digital Innovators',
-      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b47c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMG1hbnxlbnwxfHx8fDE3NTc5MjY0MTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      content: 'One of the most reliable Flutter developers I\'ve worked with. His code quality and project management skills are exceptional.',
-      rating: 5,
-      featured: false
-    },
-    {
-      id: 3,
-      name: 'Rajesh Kumar',
-      position: 'Tech Lead',
-      company: 'AppCraft Studio',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMG1hbnxlbnwxfHx8fDE3NTc5MjY0MTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      content: 'Saleh\'s expertise in Flutter development is outstanding. He helped us build a scalable app architecture that exceeded our expectations.',
-      rating: 5,
-      featured: false
-    },
-    {
-      id: 4,
-      name: 'Sarah Johnson',
-      position: 'Startup Founder',
-      company: 'HealthTech Inc',
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMG1hbnxlbnwxfHx8fDE3NTc5MjY0MTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      content: 'Working with Saleh was a game-changer for our startup. His technical skills and communication made the development process smooth.',
-      rating: 5,
-      featured: false
-    },
-    {
-      id: 5,
-      name: 'Michael Chen',
-      position: 'CTO',
-      company: 'EduTech Solutions',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMG1hbnxlbnwxfHx8fDE3NTc5MjY0MTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      content: 'Impressive Flutter development skills! Saleh delivered a complex educational app with advanced features and perfect performance.',
-      rating: 5,
-      featured: false
-    },
-    {
-      id: 6,
-      name: 'Lisa Rodriguez',
-      position: 'Project Manager',
-      company: 'FoodTech Co',
-      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b47c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMG1hbnxlbnwxfHx8fDE3NTc5MjY0MTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      content: 'Saleh\'s professionalism and Flutter expertise helped us launch our food delivery app successfully. Highly recommended!',
-      rating: 5,
-      featured: false
-    }
+    // {
+    //   id: 2,
+    //   name: 'Amina Sultana',
+    //   position: 'CEO',
+    //   company: 'Digital Innovators',
+    //   avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b47c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMG1hbnxlbnwxfHx8fDE3NTc5MjY0MTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    //   content: 'One of the most reliable Flutter developers I\'ve worked with. His code quality and project management skills are exceptional.',
+    //   rating: 5,
+    //   featured: false
+    // },
+    // {
+    //   id: 3,
+    //   name: 'Rajesh Kumar',
+    //   position: 'Tech Lead',
+    //   company: 'AppCraft Studio',
+    //   avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMG1hbnxlbnwxfHx8fDE3NTc5MjY0MTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    //   content: 'Saleh\'s expertise in Flutter development is outstanding. He helped us build a scalable app architecture that exceeded our expectations.',
+    //   rating: 5,
+    //   featured: false
+    // },
+    // {
+    //   id: 4,
+    //   name: 'Sarah Johnson',
+    //   position: 'Startup Founder',
+    //   company: 'HealthTech Inc',
+    //   avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMG1hbnxlbnwxfHx8fDE3NTc5MjY0MTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    //   content: 'Working with Saleh was a game-changer for our startup. His technical skills and communication made the development process smooth.',
+    //   rating: 5,
+    //   featured: false
+    // },
+    // {
+    //   id: 5,
+    //   name: 'Michael Chen',
+    //   position: 'CTO',
+    //   company: 'EduTech Solutions',
+    //   avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMG1hbnxlbnwxfHx8fDE3NTc5MjY0MTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    //   content: 'Impressive Flutter development skills! Saleh delivered a complex educational app with advanced features and perfect performance.',
+    //   rating: 5,
+    //   featured: false
+    // },
+    // {
+    //   id: 6,
+    //   name: 'Lisa Rodriguez',
+    //   position: 'Project Manager',
+    //   company: 'FoodTech Co',
+    //   avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b47c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMG1hbnxlbnwxfHx8fDE3NTc5MjY0MTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    //   content: 'Saleh\'s professionalism and Flutter expertise helped us launch our food delivery app successfully. Highly recommended!',
+    //   rating: 5,
+    //   featured: false
+    // }
   ]
 
   const renderStars = (rating: number) => {
@@ -93,7 +93,7 @@ export function Testimonials() {
             What Clients Say
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Don't just take my word for it. Here's what some of my amazing clients 
+            Don't just take my word for it. Here's what some of my amazing clients
             have to say about working with me.
           </p>
         </motion.div>
@@ -114,7 +114,7 @@ export function Testimonials() {
                 {testimonial.featured && (
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
                 )}
-                
+
                 <CardContent className="p-6 relative z-10">
                   {/* Quote Icon */}
                   <div className="flex justify-between items-start mb-4">
@@ -142,7 +142,7 @@ export function Testimonials() {
                         </AvatarFallback>
                       </Avatar>
                     </motion.div>
-                    
+
                     <div className="flex-1">
                       <h4 className="font-semibold text-foreground text-sm">
                         {testimonial.name}
@@ -179,10 +179,10 @@ export function Testimonials() {
                 Ready to Work Together?
               </h3>
               <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-                Join these satisfied clients and let's build something amazing together. 
+                Join these satisfied clients and let's build something amazing together.
                 Get in touch to discuss your next project.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.a
                   href="#contact"

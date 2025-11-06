@@ -1,4 +1,4 @@
-import { motion } from 'motion/react'
+import { motion } from 'framer-motion'
 import { ChevronDown, Github, Linkedin, Twitter, Mail } from 'lucide-react'
 import { Button } from './ui/button'
 import { ImageWithFallback } from './figma/ImageWithFallback'
